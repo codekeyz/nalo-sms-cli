@@ -1,4 +1,4 @@
-# Nalo-SMS-ClI
+# Nalo-SMS-ClI [![npm version](https://badge.fury.io/js/nalo-sms.svg)](https://badge.fury.io/js/nalo-sms)
 
 Send messages using Nalo Solutions Messaging Service directly from your Command Line Interface.
 
