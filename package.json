@@ -1,5 +1,5 @@
 {
-  "name": "nalo-sms-cli",
+  "name": "nalo-sms",
   "version": "1.0.0",
   "description": "Send messages using Nalo Solutions Messaging Service directly from your CLI.",
   "main": "index.js",
