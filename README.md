@@ -2,6 +2,12 @@
 
 Send messages using Nalo Solutions Messaging Service directly from your Command Line Interface.
 
+## Demo
+
+<p align="center">
+<img alt="demo"  width="auto" height="auto" src="./usage.gif"/>
+</p>
+
 ## Installation
 
 `$ npm install -g nalo-sms`
