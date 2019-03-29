@@ -1,0 +1,37 @@
+{
+  "name": "nalo-sms-cli",
+  "version": "1.0.0",
+  "description": "Send messages using Nalo Solutions Messaging Service directly from your CLI.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codekeyz/nalo-sms-cli.git"
+  },
+  "bin": {
+    "nalo-sms": "./index.js"
+  },
+  "keywords": [
+    "nalo-sms",
+    "nalo",
+    "cli",
+    "terminal",
+    "nodejs"
+  ],
+  "author": "Precious Keyz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codekeyz/nalo-sms-cli/issues"
+  },
+  "homepage": "https://github.com/codekeyz/nalo-sms-cli#readme",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "commander": "^2.19.0",
+    "configstore": "^4.0.0",
+    "got": "^9.6.0",
+    "inquirer": "^6.2.2",
+    "query-string": "^6.4.2"
+  }
+}
