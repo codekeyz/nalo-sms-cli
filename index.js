@@ -70,13 +70,17 @@ program
       api
         .sendSMS(result)
         .then(res => {
-          const code = res.body.split(':')[0];
-          if (code === '1701') {
-            console.log(chalk.green('Message has been successfully sent'));
+          if (res.body.includes(':')) {
+            console.log(chalk.red(types.getErrorType(res.body.split(':')[0])));
             return;
           }
 
-          console.log(chalk.red(types.getErrorType(code)));
+          const code = res.body.split('|')[0];
+          if (code === '1701') {
+            console.log(chalk.green('Message has been successfully sent'));
+          } else {
+            console.log(chalk.red('Unknown error. Contact Support'));
+          }
         })
         .catch(err => {
           console.log(err);
