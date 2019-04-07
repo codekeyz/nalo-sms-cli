@@ -1,6 +1,8 @@
 # Nalo-SMS-ClI [![npm version](https://badge.fury.io/js/nalo-sms.svg)](https://badge.fury.io/js/nalo-sms)
 
-Send messages using Nalo Solutions Messaging Service directly from your Command Line Interface.
+## **Overview**
+
+Send messages using Nalo Solutions Messaging Service directly from your Command Line Interface. You need to create a Nalo account [here](https://sms.nalosolutions.com/nalosms/signup.php/) in order to use this API.
 
 ## Demo
 
