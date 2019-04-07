@@ -6,7 +6,7 @@ const inquirer = require('inquirer');
 const Configstore = require('configstore');
 const chalk = require('chalk');
 const questions = require('./lib/question');
-const types = require('./lib/type');
+const constants = require('./lib/constants');
 const api = require('./lib/api');
 const path = require('path');
 const packageJson = require(path.join(__dirname, 'package.json'));
@@ -46,7 +46,7 @@ program
 
     inquirer.prompt(query).then(res => {
       res.dlr = res.dlr ? 1 : 0;
-      res.type = types.getMessageType(res.type);
+      res.type = constants.getMessageType(res.type);
 
       res.username =
         res.use_global_user === true
@@ -79,7 +79,9 @@ program
         .sendSMS(result)
         .then(res => {
           if (res.body.includes(':')) {
-            console.log(chalk.red(types.getErrorType(res.body.split(':')[0])));
+            console.log(
+              chalk.red(constants.getErrorType(res.body.split(':')[0]))
+            );
             return;
           }
 
