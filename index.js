@@ -17,7 +17,8 @@ const configStore = new Configstore(packageJson.name);
 program
   .name('nalo-sms')
   .version(packageJson.version, '-v, --version')
-  .description(packageJson.description);
+  .description(packageJson.description)
+  .usage('[command] [options]');
 
 program
   .command('set <value>')
@@ -83,7 +84,7 @@ program
           }
         })
         .catch(err => {
-          console.log(err);
+          console.log(chalk.red(err.message));
         });
     });
   });

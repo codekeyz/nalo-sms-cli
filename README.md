@@ -14,7 +14,7 @@ Send messages using Nalo Solutions Messaging Service directly from your Command 
 
 ## Docs
 
-    Usage: nalo-sms [options] [command]
+    Usage: nalo-sms [command] [options]
 
     Send messages using Nalo Solutions Messaging Service directly from your CLI.
 
