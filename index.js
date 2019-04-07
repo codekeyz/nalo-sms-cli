@@ -42,23 +42,30 @@ program
   .command('send')
   .description('Send message from the cli')
   .action(function() {
-    inquirer.prompt(questions.send_message_question(configStore)).then(res => {
+    const query = questions.send_message_question(configStore);
+
+    inquirer.prompt(query).then(res => {
       res.dlr = res.dlr ? 1 : 0;
       res.type = types.getMessageType(res.type);
+
       res.username =
         res.use_global_user === true
           ? configStore.get('user.username')
           : res.username;
+
       res.password =
         res.use_global_pass === true
           ? configStore.get('user.password')
           : res.password;
+
       if (res.store_username) {
         configStore.set('user.username', res.username);
       }
+
       if (res.store_password) {
         configStore.set('user.password', res.password);
       }
+
       const result = {};
       result['dlr'] = res.dlr;
       result['type'] = res.type;
