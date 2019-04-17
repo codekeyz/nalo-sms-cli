@@ -33,9 +33,6 @@ program
     if (cmd.pass) {
       configStore.set('user.password', value);
     }
-    if (cmd.source) {
-      configStore.set('user.source', value);
-    }
   });
 
 program
@@ -82,6 +79,7 @@ program
             console.log(
               chalk.red(constants.getErrorType(res.body.split(':')[0]))
             );
+            console.log(res.body);
             return;
           }
 
@@ -96,6 +94,27 @@ program
           console.log(chalk.red(err.message));
         });
     });
+  });
+
+program
+  .command('balance')
+  .description('Check your credit balance')
+  .action(function() {
+    let username =  configStore.get('user.username');
+    let password = configStore.get('user.password');
+
+    if (username == null || password == null) {
+      return console.log(chalk.yellow('Run nalo-sms set [options] <value>'))
+    }
+
+    api.checkBalance(username, password)
+    .then(res => {
+        let result = JSON.parse(res.body);
+        console.log(chalk.yellow(`Your balance is Ghc${result.balance}`));
+    })
+    .catch(err => {
+        console.log(err.message);
+    })
   });
 
 program.parse(process.argv);
