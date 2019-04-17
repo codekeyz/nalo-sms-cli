@@ -79,7 +79,6 @@ program
             console.log(
               chalk.red(constants.getErrorType(res.body.split(':')[0]))
             );
-            console.log(res.body);
             return;
           }
 
