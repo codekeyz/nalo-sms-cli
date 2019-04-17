@@ -27,10 +27,11 @@ Send messages using Nalo Solutions Messaging Service directly from your Command 
     Commands:
         set [options] <value>  Set global config for nalo-sms-cli
         send                   Send message from the cli
+        balance                Check your credit balance
 
 ## Usage
 
-The commands available are: `nalo-sms send`, `nalo-sms set`
+The commands available are: `nalo-sms send`, `nalo-sms set`, `nalo-sms balance`
 
 #### Set Global Username command
 
@@ -51,6 +52,12 @@ $ nalo-sms send
 ? Is Delivery report required Yes
 ? Use Global Username Yes
 ? Use Global Password Yes
+```
+
+#### Check SMS Balance
+```
+$ nalo-sms balance
+Your balance is Ghc0.018
 ```
 
 ## Contributing
