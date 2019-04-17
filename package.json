@@ -31,7 +31,6 @@
     "commander": "^2.19.0",
     "configstore": "^4.0.0",
     "got": "^9.6.0",
-    "inquirer": "^6.2.2",
-    "query-string": "^6.4.2"
+    "inquirer": "^6.2.2"
   }
 }
